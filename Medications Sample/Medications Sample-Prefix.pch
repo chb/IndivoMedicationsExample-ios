@@ -1,0 +1,29 @@
+//
+// Prefix header for all source files of the 'Medications Sample' target in the 'Medications Sample' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+#	import <UIKit/UIKit.h>
+#	import <Foundation/Foundation.h>
+#endif
+
+// Easy access to the app delegate
+#define APP_DELEGATE ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+
+// DLog only displays if -DDEBUG is set, ALog always displays output regardless of the DEBUG setting
+#ifdef DEBUG
+#   define DLog(fmt, ...) NSLog((@"%s (line %d) " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#   define DLog(...)
+#endif
+#define ALog(fmt, ...) NSLog((@"%s (line %d) " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+
+// Make error reporting easy
+#define ERR(p, s, c) if (p != NULL && s) { *p = [NSError errorWithDomain:NSCocoaErrorDomain code:c userInfo:[NSDictionary dictionaryWithObject:s forKey:NSLocalizedDescriptionKey]]; }
+
