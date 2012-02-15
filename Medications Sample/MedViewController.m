@@ -21,7 +21,7 @@
  */
 
 #import "MedViewController.h"
-#import "IndivoMedication.h"
+#import "IndivoDocuments.h"
 
 @interface MedViewController ()
 

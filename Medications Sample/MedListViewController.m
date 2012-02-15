@@ -23,7 +23,7 @@
 #import "MedListViewController.h"
 #import "AppDelegate.h"
 #import "IndivoRecord.h"
-#import "IndivoMedication.h"
+#import "IndivoDocuments.h"
 #import "MedViewController.h"
 
 
@@ -189,11 +189,21 @@
 		return;
 	}
 	
+	/*******************************************************
+	 *  This is the place to setup your medication object  *
+	 *******************************************************/
+	newMed.name = [INCodedValue new];
 	newMed.name.text = @"L-Ascorbic Acid";
+	newMed.brandName = [INCodedValue new];
 	newMed.brandName.text = @"Vitamin C";
 	newMed.brandName.abbrev = @"vitamin-c";
+	
+	newMed.dateStarted = [INDate now];
+	DLog(@"NEW: %@", [newMed documentXML]);
+	/******************************************************/
+	
+	// show the medication
 	[self showMedication:newMed animated:YES];
-	[self.tableView reloadData];
 	
 	// push to the server
 	[newMed push:^(BOOL didCancel, NSString *errorString) {
@@ -206,6 +216,13 @@
 			[alert show];
 		}
 		else if (!didCancel) {
+			[activeRecord sendMessage:@"New medication"
+							 withBody:@"A new medication has just been added"
+							   ofType:INMessageTypePlaintext
+							 severity:INMessageSeverityLow
+						  attachments:[NSArray arrayWithObject:newMed]
+							 callback:NULL];
+			
 			self.meds = [meds arrayByAddingObject:newMed];
 			[self.tableView reloadData];
 		}
@@ -240,7 +257,7 @@
 		
 		// display the name
 		IndivoMedication *med = [meds objectAtIndex:indexPath.row];
-		cell.textLabel.text = med.brandName.text;
+		cell.textLabel.text = [med displayName];
 		return cell;
 	}
 	return nil;
