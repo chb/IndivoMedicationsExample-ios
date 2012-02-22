@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EE3756FC1430BE83002ABE18 /* libIndivoServer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE3756FB1430BE83002ABE18 /* libIndivoServer.a */; };
 		EE3756FE1430C75A002ABE18 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE3756FD1430C75A002ABE18 /* MainWindow.xib */; };
 		EE37571C1430CAC6002ABE18 /* MedListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE37571B1430CAC6002ABE18 /* MedListViewController.m */; };
 		EE37572314313DCE002ABE18 /* MedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE37572214313DCE002ABE18 /* MedView.xib */; };
@@ -18,13 +17,13 @@
 		EEB38FB11417D0F000478FA0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB38FB01417D0F000478FA0 /* main.m */; };
 		EEB38FB51417D0F000478FA0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB38FB41417D0F000478FA0 /* AppDelegate.m */; };
 		EEB38FBE1417D0F000478FA0 /* MedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB38FBD1417D0F000478FA0 /* MedViewController.m */; };
+		EEB68EDF14F555D200F9FE61 /* libIndivo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEB68EDE14F555D200F9FE61 /* libIndivo.a */; };
 		EED8F045141816AE002BDD10 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EED8F044141816AE002BDD10 /* Security.framework */; };
 		EED8F047141816BC002BDD10 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EED8F046141816BC002BDD10 /* libxml2.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EE18082014BCB5B7009D7873 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		EE3756FB1430BE83002ABE18 /* libIndivoServer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libIndivoServer.a; path = "../IndivoConnector/build/Release-iphoneos/libIndivoServer.a"; sourceTree = "<group>"; };
 		EE3756FD1430C75A002ABE18 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		EE37571A1430CAC6002ABE18 /* MedListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedListViewController.h; sourceTree = "<group>"; };
 		EE37571B1430CAC6002ABE18 /* MedListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedListViewController.m; sourceTree = "<group>"; };
@@ -41,6 +40,7 @@
 		EEB38FB41417D0F000478FA0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EEB38FBC1417D0F000478FA0 /* MedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MedViewController.h; sourceTree = "<group>"; };
 		EEB38FBD1417D0F000478FA0 /* MedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MedViewController.m; sourceTree = "<group>"; };
+		EEB68EDE14F555D200F9FE61 /* libIndivo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libIndivo.a; path = "../../../../Library/Developer/Xcode/DerivedData/IndivoFramework-gduhtqnxmhtalkbzvzlkhptnbwim/Build/Products/Debug-iphoneos/libIndivo.a"; sourceTree = "<group>"; };
 		EED8F044141816AE002BDD10 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
 		EED8F046141816BC002BDD10 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = /usr/lib/libxml2.dylib; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
@@ -50,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE3756FC1430BE83002ABE18 /* libIndivoServer.a in Frameworks */,
+				EEB68EDF14F555D200F9FE61 /* libIndivo.a in Frameworks */,
 				EEB38FA51417D0F000478FA0 /* UIKit.framework in Frameworks */,
 				EEB38FA71417D0F000478FA0 /* Foundation.framework in Frameworks */,
 				EEB38FA91417D0F000478FA0 /* CoreGraphics.framework in Frameworks */,
@@ -83,7 +83,7 @@
 		EEB38FA31417D0F000478FA0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EE3756FB1430BE83002ABE18 /* libIndivoServer.a */,
+				EEB68EDE14F555D200F9FE61 /* libIndivo.a */,
 				EED8F046141816BC002BDD10 /* libxml2.dylib */,
 				EEB38FA41417D0F000478FA0 /* UIKit.framework */,
 				EEB38FA61417D0F000478FA0 /* Foundation.framework */,
@@ -146,7 +146,7 @@
 		EEB38F971417D0F000478FA0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "Children's Hospital Boston";
 			};
 			buildConfigurationList = EEB38F9A1417D0F000478FA0 /* Build configuration list for PBXProject "Medications Sample" */;
@@ -253,9 +253,14 @@
 		EEB38FC21417D0F000478FA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Medications Sample/Medications Sample-Prefix.pch";
 				INFOPLIST_FILE = "Medications Sample/Medications Sample-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/IndivoFramework-gduhtqnxmhtalkbzvzlkhptnbwim/Build/Products/Debug-iphoneos\"",
+				);
 				OTHER_CFLAGS = "-DDEBUG";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -267,9 +272,14 @@
 		EEB38FC31417D0F000478FA0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Medications Sample/Medications Sample-Prefix.pch";
 				INFOPLIST_FILE = "Medications Sample/Medications Sample-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/IndivoFramework-gduhtqnxmhtalkbzvzlkhptnbwim/Build/Products/Debug-iphoneos\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";

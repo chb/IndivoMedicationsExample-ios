@@ -129,6 +129,7 @@
 				
 				// successfully fetched medications, display
 				else if (!userDidCancel) {
+					//DLog(@"%@", [userInfo objectForKey:INResponseStringKey]);
 					self.meds = [userInfo objectForKey:INResponseArrayKey];
 					[self.tableView reloadData];
 				}
@@ -195,8 +196,10 @@
 	newMed.name = [INCodedValue new];
 	newMed.name.text = @"L-Ascorbic Acid";
 	newMed.brandName = [INCodedValue new];
-	newMed.brandName.text = @"Vitamin C";
-	newMed.brandName.abbrev = @"vitamin-c";
+	newMed.brandName.text = @"Vitamin C Supplement";
+	newMed.brandName.abbrev = @"vit-c";			// will be ignored if brandName.type and brandName.value is not set as well
+	newMed.brandName.type = @"med";
+	newMed.brandName.value = @"vitamin-c";
 	
 	newMed.dateStarted = [INDate now];
 	DLog(@"NEW: %@", [newMed documentXML]);
