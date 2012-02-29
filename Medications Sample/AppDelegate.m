@@ -23,6 +23,7 @@
 #import "AppDelegate.h"
 #import "MedListViewController.h"
 #import "IndivoServer.h"
+#import "IndivoAppDocument.h"
 
 
 @interface AppDelegate ()
@@ -52,6 +53,45 @@
 	
     // Setup the server
 	self.indivo = [IndivoServer serverWithDelegate:self];
+	
+	// ** Demo: Fetch application specific documents
+	[indivo fetchAppSpecificDocumentsWithCallback:^(BOOL success, NSDictionary *__autoreleasing userInfo) {
+		
+		// success, pull the individual app documents
+		if (success) {
+			NSArray *appDocuments = [userInfo objectForKey:INResponseArrayKey];
+			if ([appDocuments count] > 0) {
+				for (IndivoAppDocument *appDoc in appDocuments) {
+					[appDoc pull:^(BOOL userDidCancel, NSString *__autoreleasing errorMessage) {
+						if (errorMessage) {
+							DLog(@"Error pulling app document: %@", errorMessage);
+						}
+					}];
+				}
+			}
+			
+			// there is none, create one
+			else {
+				IndivoAppDocument *newAppDoc = [IndivoAppDocument newOnServer:indivo];
+				
+				NSDictionary *childDict = [NSDictionary dictionaryWithObject:@"a node attribute" forKey:@"foo"];
+				INXMLNode *aChild = [INXMLNode nodeWithName:@"child" attributes:childDict];
+				[newAppDoc.tree addChild:aChild];
+				
+				// push
+				[newAppDoc push:^(BOOL userDidCancel, NSString *__autoreleasing errorMessage) {
+					if (errorMessage) {
+						DLog(@"Error pushing new app document: %@", errorMessage);
+					}
+				}];
+			}
+		}
+		
+		// log failure
+		else {
+			DLog(@"Failed to get app specific documents: %@", [[userInfo objectForKey:INErrorKey] localizedDescription]);
+		}
+	}];
 	
     return YES;
 }
