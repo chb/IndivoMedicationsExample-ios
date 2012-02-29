@@ -28,7 +28,7 @@
 		EE37571A1430CAC6002ABE18 /* MedListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedListViewController.h; sourceTree = "<group>"; };
 		EE37571B1430CAC6002ABE18 /* MedListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedListViewController.m; sourceTree = "<group>"; };
 		EE37572214313DCE002ABE18 /* MedView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedView.xib; sourceTree = "<group>"; };
-		EE51921614FD3CC3004B0BC6 /* libIndivo.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libIndivo.a; path = "../IndivoFramework/build/Release-iphoneos/libIndivo.a"; sourceTree = "<group>"; };
+		EE51921614FD3CC3004B0BC6 /* libIndivo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libIndivo.a; path = "../IndivoFramework/build/Release-iphoneos/libIndivo.a"; sourceTree = "<group>"; };
 		EEB38FA01417D0F000478FA0 /* Medications Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Medications Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB38FA41417D0F000478FA0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EEB38FA61417D0F000478FA0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -65,7 +65,6 @@
 		EEB38F951417D0F000478FA0 = {
 			isa = PBXGroup;
 			children = (
-				EE51921614FD3CC3004B0BC6 /* libIndivo.a */,
 				EE18082014BCB5B7009D7873 /* README.md */,
 				EEB38FAA1417D0F000478FA0 /* Medications Sample */,
 				EEB38FA31417D0F000478FA0 /* Frameworks */,
@@ -146,7 +145,7 @@
 		EEB38F971417D0F000478FA0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "Children's Hospital Boston";
 			};
 			buildConfigurationList = EEB38F9A1417D0F000478FA0 /* Build configuration list for PBXProject "Medications Sample" */;
@@ -253,6 +252,7 @@
 		EEB38FC21417D0F000478FA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Medications Sample/Medications Sample-Prefix.pch";
 				INFOPLIST_FILE = "Medications Sample/Medications Sample-Info.plist";
@@ -267,6 +267,7 @@
 		EEB38FC31417D0F000478FA0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Medications Sample/Medications Sample-Prefix.pch";
 				INFOPLIST_FILE = "Medications Sample/Medications Sample-Info.plist";
