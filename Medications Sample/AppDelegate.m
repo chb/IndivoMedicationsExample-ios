@@ -54,7 +54,7 @@
     // Setup the server
 	self.indivo = [IndivoServer serverWithDelegate:self];
 	
-	// ** Demo: Fetch application specific documents
+	/*/ ** Demo: Fetch application specific documents
 	[indivo fetchAppSpecificDocumentsWithCallback:^(BOOL success, NSDictionary *__autoreleasing userInfo) {
 		
 		// success, pull the individual app documents
@@ -91,7 +91,7 @@
 		else {
 			DLog(@"Failed to get app specific documents: %@", [[userInfo objectForKey:INErrorKey] localizedDescription]);
 		}
-	}];
+	}];	//	*/
 	
     return YES;
 }

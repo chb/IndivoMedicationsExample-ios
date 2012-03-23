@@ -202,11 +202,7 @@
 	newMed.brandName.value = @"vitamin-c";
 	
 	newMed.dateStarted = [INDate now];
-	DLog(@"NEW: %@", [newMed documentXML]);
 	/******************************************************/
-	
-	// show the medication
-	[self showMedication:newMed animated:YES];
 	
 	// push to the server
 	[newMed push:^(BOOL didCancel, NSString *errorString) {
@@ -219,6 +215,11 @@
 			[alert show];
 		}
 		else if (!didCancel) {
+			
+			// show the medication
+			[self showMedication:newMed animated:YES];
+			
+			// send a natification
 			[activeRecord sendMessage:@"New medication"
 							 withBody:@"A new medication has just been added"
 							   ofType:INMessageTypePlaintext
