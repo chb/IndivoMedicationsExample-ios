@@ -193,15 +193,14 @@
 	/*******************************************************
 	 *  This is the place to setup your medication object  *
 	 *******************************************************/
-	newMed.name = [INCodedValue new];
-	newMed.name.text = @"L-Ascorbic Acid";
-	newMed.brandName = [INCodedValue new];
-	newMed.brandName.text = @"Vitamin C Supplement";
-	newMed.brandName.abbrev = @"vit-c";			// will be ignored if brandName.type and brandName.value is not set as well
-	newMed.brandName.type = @"med";
-	newMed.brandName.value = @"vitamin-c";
+	newMed.drugName = [INCodedValue new];
+	newMed.drugName.title = @"Vitamin C Supplement";
+	newMed.drugName.system = @"http://purl.bioontology.org/ontology/RXNORM/";
+	newMed.drugName.identifier = @"220820";
 	
-	newMed.dateStarted = [INDate now];
+	newMed.startDate = [INDateTime now];
+	newMed.endDate = [INDateTime now];
+	newMed.endDate.date = [newMed.endDate.date dateByAddingTimeInterval:(30*24*3600)];
 	/******************************************************/
 	
 	// push to the server
