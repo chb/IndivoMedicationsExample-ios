@@ -31,7 +31,7 @@
 
 // view properties
 @property (nonatomic, assign) IBOutlet UILabel *nameLabel;
-@property (nonatomic, assign) IBOutlet UILabel *brandLabel;
+@property (nonatomic, assign) IBOutlet UILabel *codeLabel;
 
 
 @end

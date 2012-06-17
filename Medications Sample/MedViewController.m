@@ -33,7 +33,7 @@
 @implementation MedViewController
 
 @synthesize medication;
-@synthesize nameLabel, brandLabel;
+@synthesize nameLabel, codeLabel;
 
 
 - (id)init
@@ -57,8 +57,8 @@
 - (void)configureView
 {
 	if (self.medication) {
-	    self.brandLabel.text = medication.brandName.text;
-		self.nameLabel.text = medication.name.text;
+		self.nameLabel.text = medication.drugName.title;
+	    self.codeLabel.text = [NSString stringWithFormat:@"RxNorm: %@", ([medication.drugName.identifier length] > 0) ? medication.drugName.identifier : @"unknown"];
 	}
 }
 
@@ -76,7 +76,7 @@
     [super viewDidUnload];
     
 	self.nameLabel = nil;
-	self.brandLabel = nil;
+	self.codeLabel = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

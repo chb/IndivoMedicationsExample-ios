@@ -4,6 +4,39 @@ Indivo Medications Sample
 This is a simple sample App to demonstrate basic usage of Indivo's [iOS framework][framework]. The interesting parts are:
 
 
+## Registering the App with Indivo
+
+To allow the app to run with your instance of Indivo 2.0, add the following file `manifest.json` to the server directory `/registered_apps/user/`:
+
+	{
+	  "name" : "Med Sample",
+	  "description" : "Sample iOS app for medication management",
+	  "author" : "Pascal Pfiffner, pascal.pfiffner@childrens.harvard.edu",
+	  "id" : "medsample@apps.indivo.org",
+	  "version" : "1.0.0",
+	  "smart_version": "0.4",
+	
+	  "mode" : "ui",	
+	  "scope": "record",
+	  "has_ui": false,
+	  "frameable": false,
+	
+	  "icon" :  "",
+	  "index": "indivo-framework:///did_select_record?record_id={record_id}&carenet_id={carenet_id}"
+	}
+
+And, in the same directory, add `credentials.json`:
+
+	{
+	  "consumer_key": "medsample@apps.indivo.org",
+	  "consumer_secret": "medsample"
+	}
+
+Then copy the file `IndivoConfig-default.h` to `IndivoConfig.h` and adjust the values and your server settings accordingly. Don't forget to let the server know about the app afterwards:
+
+	$ python manage.py sync_apps
+
+
 ## AppDelegate
 
 The app delegate holds a reference to the `IndivoServer` instance `indivo`, which is the base point for all transactions with our Indivo Server. Upon App launch, the app delegate sets up this instance with:
