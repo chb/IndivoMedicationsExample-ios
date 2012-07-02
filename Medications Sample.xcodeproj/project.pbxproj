@@ -145,7 +145,7 @@
 		EEB38F971417D0F000478FA0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Children's Hospital Boston";
 			};
 			buildConfigurationList = EEB38F9A1417D0F000478FA0 /* Build configuration list for PBXProject "Medications Sample" */;
@@ -225,6 +225,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -244,6 +245,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -257,7 +259,6 @@
 				GCC_PREFIX_HEADER = "Medications Sample/Medications Sample-Prefix.pch";
 				INFOPLIST_FILE = "Medications Sample/Medications Sample-Info.plist";
 				OTHER_CFLAGS = "-DDEBUG";
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 				WRAPPER_EXTENSION = app;
@@ -271,7 +272,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Medications Sample/Medications Sample-Prefix.pch";
 				INFOPLIST_FILE = "Medications Sample/Medications Sample-Info.plist";
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 				WRAPPER_EXTENSION = app;

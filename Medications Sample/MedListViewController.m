@@ -113,7 +113,6 @@
 			
 			// fetch this record's medications
 			[activeRecord fetchReportsOfClass:[IndivoMedication class]
-								   withStatus:INDocumentStatusActive
 									 callback:^(BOOL success, NSDictionary *__autoreleasing userInfo) {
 				
 				// error fetching medications
@@ -214,6 +213,8 @@
 			[alert show];
 		}
 		else if (!didCancel) {
+			self.meds = [meds arrayByAddingObject:newMed];
+			[self.tableView reloadData];
 			
 			// show the medication
 			[self showMedication:newMed animated:YES];
@@ -225,9 +226,6 @@
 							 severity:INMessageSeverityLow
 						  attachments:[NSArray arrayWithObject:newMed]
 							 callback:NULL];
-			
-			self.meds = [meds arrayByAddingObject:newMed];
-			[self.tableView reloadData];
 		}
 	}];
 }
