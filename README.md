@@ -32,6 +32,8 @@ And, in the same directory, add `credentials.json`:
 	  "consumer_secret": "medsample"
 	}
 
+**NEVER USE SUCH SIMPLE KEYS AND SECRETS IN PRODUCTION APPS!**
+
 Then copy the file `IndivoConfig-default.h` to `IndivoConfig.h` and adjust the values and your server settings accordingly. Don't forget to let the server know about the app afterwards:
 
 	$ python manage.py sync_apps
@@ -75,7 +77,6 @@ The view controller displays a *connect* button top left, which upon touching ca
 ### Fetch the selected record's medications ###
 
 	[activeRecord fetchReportsOfClass:[IndivoMedication class]
-	                       withStatus:INDocumentStatusActive
 	                         callback:^(BOOL success, NSDictionary *__autoreleasing userInfo) {
 		// report fetching completed
 	}];
