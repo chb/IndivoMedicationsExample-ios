@@ -34,9 +34,11 @@ And, in the same directory, add `credentials.json`:
 
 **NEVER USE SUCH SIMPLE KEYS AND SECRETS IN PRODUCTION APPS!**
 
-Then copy the file `IndivoConfig-default.h` to `IndivoConfig.h` and adjust the values and your server settings accordingly. Don't forget to let the server know about the app afterwards:
+Don't forget to let the server know about the app afterwards:
 
 	$ python manage.py sync_apps
+
+Then, in the Indivo framework project, copy the file `IndivoConfig-default.h` to `IndivoConfig.h` and adjust the values and your server settings accordingly.
 
 
 ## AppDelegate
