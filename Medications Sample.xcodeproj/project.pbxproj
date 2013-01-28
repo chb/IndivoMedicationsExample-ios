@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE18B65A16B7261500D99CAF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE18B65916B7261500D99CAF /* Default@2x.png */; };
+		EE18B65D16B7261B00D99CAF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE18B65C16B7261B00D99CAF /* Default-568h@2x.png */; };
+		EE18B65F16B7261E00D99CAF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = EE18B65E16B7261E00D99CAF /* Default.png */; };
 		EE3756FE1430C75A002ABE18 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE3756FD1430C75A002ABE18 /* MainWindow.xib */; };
 		EE37571C1430CAC6002ABE18 /* MedListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE37571B1430CAC6002ABE18 /* MedListViewController.m */; };
 		EE37572314313DCE002ABE18 /* MedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE37572214313DCE002ABE18 /* MedView.xib */; };
@@ -24,6 +27,9 @@
 
 /* Begin PBXFileReference section */
 		EE18082014BCB5B7009D7873 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		EE18B65916B7261500D99CAF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		EE18B65C16B7261B00D99CAF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		EE18B65E16B7261E00D99CAF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		EE3756FD1430C75A002ABE18 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		EE37571A1430CAC6002ABE18 /* MedListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedListViewController.h; sourceTree = "<group>"; };
 		EE37571B1430CAC6002ABE18 /* MedListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedListViewController.m; sourceTree = "<group>"; };
@@ -62,6 +68,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE18B66016B7262B00D99CAF /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				EE18B65E16B7261E00D99CAF /* Default.png */,
+				EE18B65C16B7261B00D99CAF /* Default-568h@2x.png */,
+				EE18B65916B7261500D99CAF /* Default@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		EEB38F951417D0F000478FA0 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +117,7 @@
 				EE37571B1430CAC6002ABE18 /* MedListViewController.m */,
 				EEB38FBC1417D0F000478FA0 /* MedViewController.h */,
 				EEB38FBD1417D0F000478FA0 /* MedViewController.m */,
+				EE18B66016B7262B00D99CAF /* Images */,
 				EEB38FAB1417D0F000478FA0 /* Supporting Files */,
 			);
 			path = "Medications Sample";
@@ -173,6 +190,9 @@
 				EEB38FAF1417D0F000478FA0 /* InfoPlist.strings in Resources */,
 				EE3756FE1430C75A002ABE18 /* MainWindow.xib in Resources */,
 				EE37572314313DCE002ABE18 /* MedView.xib in Resources */,
+				EE18B65A16B7261500D99CAF /* Default@2x.png in Resources */,
+				EE18B65D16B7261B00D99CAF /* Default-568h@2x.png in Resources */,
+				EE18B65F16B7261E00D99CAF /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
