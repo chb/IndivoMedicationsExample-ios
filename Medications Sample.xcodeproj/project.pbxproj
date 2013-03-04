@@ -280,7 +280,7 @@
 				INFOPLIST_FILE = "Medications Sample/Medications Sample-Info.plist";
 				OTHER_CFLAGS = "-DDEBUG";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -293,7 +293,7 @@
 				GCC_PREFIX_HEADER = "Medications Sample/Medications Sample-Prefix.pch";
 				INFOPLIST_FILE = "Medications Sample/Medications Sample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
